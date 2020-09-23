@@ -1,7 +1,10 @@
 import React, { Component } from "react";
-import XYFrame from "semiotic/lib/XYFrame"
+import XYFrame from "semiotic/lib/XYFrame";
 import { curveCatmullRom } from "d3-shape"
 import { scaleTime } from "d3-scale"
+import { formatComma, formatDate } from '../../utils/utilities'
+import './Graph.css';
+
 
 const theme = ["#19860D"]
 
@@ -13,7 +16,7 @@ class Graph extends Component {
                      ...this.props.data 
                     ]
                 },
-            size: [1200, 400],
+            size: [860, 400],
             margin: { 
                 left: 80, 
                 bottom: 90, 
@@ -36,7 +39,7 @@ class Graph extends Component {
                 fill: "none"
             }),
             title: (
-                <text textAnchor="middle">Number of Colorado COVID-19 Cases by Day</text>
+                <text textAnchor="middle">Number of Colorado Covid-19 Cases by Day</text>
             ),
             axes: [
                 { 
@@ -56,7 +59,14 @@ class Graph extends Component {
                         locationDistance: 55 
                     } 
                 }
-            ]
+            ],
+            hoverAnnotation: true,
+            tooltipContent: d => (
+                <div className="tooltip-content">
+                  <p>Date: {formatDate(d.Date)}</p>
+                  <p>Total Case Count: {formatComma(d.Cases)}</p>
+                </div>
+            )
         }
         return <XYFrame {...frameProps} />
     }
