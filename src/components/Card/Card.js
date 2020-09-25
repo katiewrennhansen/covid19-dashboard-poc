@@ -28,7 +28,7 @@ class MyCard extends Component {
             { this.props.data.map((day, i) => {
                 return (
                   <Table.Row key={i}>
-                    <Table.Col>{formatDate(day.Date)}</Table.Col>
+                    <Table.Col><p>{formatDate(day.Date)}</p></Table.Col>
                     <Table.Col>{formatComma(day.Cases)}</Table.Col>
                   </Table.Row>
                 )

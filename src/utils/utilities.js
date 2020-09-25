@@ -9,7 +9,7 @@ export function formatComma(num){
 }
 
 export function formatDate(date){
-    const monthArray = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul","Aug", "Sep", "Oct", "Nov", "Dec"];
+    const monthArray = ["January", "February", "March", "April", "May", "June", "July","August", "September", "October", "November", "December"];
     const dateArray = date.split('/');
 
     let formattedMonth;

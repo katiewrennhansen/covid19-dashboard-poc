@@ -1,5 +1,8 @@
 .data-table {
-    height: 0px;
-    transform: translateX(-3000px);
-    overflow: hidden;
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
 }
