@@ -10,9 +10,9 @@
 }
   
 circle.frame-hover {
-  stroke:#19860D;
+  stroke: #FF0000;
   r: 5;
-  fill: #19860D;
+  fill: #FF0000;
 }
 
 .axis-label {

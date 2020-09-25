@@ -6,7 +6,7 @@ import { formatComma, formatDate } from '../../utils/utilities'
 import './Graph.css';
 
 
-const theme = ["#19860D"]
+const theme = ["#FF0000"]
 
 class Graph extends Component {
     render(){
