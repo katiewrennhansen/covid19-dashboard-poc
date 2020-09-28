@@ -1,5 +1,3 @@
-
-
 export function formatComma(num){
     num = num.toString();
     var pattern = /(-?\d+)(\d{3})/;
